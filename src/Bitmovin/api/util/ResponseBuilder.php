@@ -32,7 +32,7 @@ class ResponseBuilder
         $listName = is_null($listName) ? self::getListNameFromClassName($className) : $listName;
         $responseBody = $response->getBody()->getContents();
         $jsonObject = json_decode($responseBody);
-
+        var_dump($responseBody);
         $requestId = $jsonObject->requestId;
         $status = $jsonObject->status;
         $data = NULL;
